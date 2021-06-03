@@ -3,61 +3,11 @@ import * as THREE from 'three'
 import { headerScroll } from './headScroll'
 import {skillCard} from './creatEle'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import {allSkills,myTools} from './data'
+import { addFloor } from './addFloor'
+import { addHTML } from './htmlAddition'
+import { addEnv } from './addEnv'
 //import { DirectionalLight } from 'three'
-export interface Skill{
-	title:string,
-	image:string,
-	level:0|1|2|3|4|5,
-	obj?:any
-}
-export interface Tool{
-	title:string,
-	image:string,
-}
-const allSkills:Skill[]=[
-	{image:'assets/logo/Python-logo.png',
-	title:'Javascript',
-	level:5
-    },
-	{image:'assets/logo/Python-logo.png',
-	title:'Java',
-	level:5},
-	{
-	image:'assets/logo/Python-logo.png',
-	title:'Flutter',
-	level:5
-	},
-	{
-		image:'assets/logo/Python-logo.png',
-		title:'React',
-		level:5,
-		},
-		
-	{
-		image:'assets/logo/Python-logo.png',
-		title:'PYTHON',
-		level:3,
-	},
-		
-	{image:'assets/logo/Python-logo.png',
-	title:'HTML',
-	level:5,
-	},
-	{
-	image:'assets/logo/Python-logo.png',
-	title:'Dart',
-	level:5,
-	},
-	
-	{
-	image:'assets/my.jpg',
-	title:'CSS',
-	level:5,
-	},
-
-
-]
-const tool:Tool[]=allSkills
 const app = document.querySelector<HTMLCanvasElement>('#bg')!
 const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 30)
@@ -81,16 +31,7 @@ scene.add(faceCube);
 
 //init
 (async()=>{
-
-	//skill section elemments
-	const skillSec=document.querySelector('#skillSection')!
-	allSkills.forEach((t)=>{
-		skillSec.appendChild(skillCard(t))
-	})
-	skillSec.append('<br> Tools')
-	tool.forEach((t)=>{
-		skillSec.appendChild(skillCard({...t,level:0}))
-	})
+	addHTML()
 	//configure
 	renderer.setPixelRatio(window.devicePixelRatio)
 	renderer.setSize(window.innerWidth, window.innerHeight)
@@ -108,151 +49,16 @@ scene.add(faceCube);
 	const ambientLight = new THREE.AmbientLight(0xffffff)
 	ambientLight.intensity=0.5
 	scene.add( ambientLight)
-
-	//floor	
-	const floorTexture = new THREE.TextureLoader().load('assets/planet.jpg')
-	floorTexture.wrapS= THREE.RepeatWrapping
-	floorTexture.wrapT= THREE.RepeatWrapping
-	floorTexture.offset.set( 0, 0 )
-	floorTexture.repeat.set( 70, 70 )
-	const floorNormalTexture = new THREE.TextureLoader().load('assets/planetNormal.png')
-	floorNormalTexture.wrapS= THREE.RepeatWrapping
-	floorNormalTexture.wrapT= THREE.RepeatWrapping
-	floorNormalTexture.offset.set( 0, 0 )
-	floorNormalTexture.repeat.set( 70, 70 )
-	const meshFloor = new THREE.Mesh(
-	new THREE.PlaneGeometry(1000,1000, 10,10),
-	new THREE.MeshStandardMaterial({
-		map: floorTexture,
-		normalMap:floorNormalTexture,
-		displacementScale:-1
-	})
-	)
-	meshFloor.rotation.x -= Math.PI / 2 // Rotate the floor 90 degrees
-	//TODO
-	scene.add(meshFloor)	
-	const gtloader = new GLTFLoader()
-
-//============== objects
-	//** stars**
-	 //star
-	 function addStar() {
-		const geometry = new THREE.SphereGeometry(0.1, 24, 24)
-		const material = new THREE.MeshStandardMaterial({ color: 0xffffff })
-		const star = new THREE.Mesh(geometry, material)
-		const [x, y, z] =[
-		THREE.MathUtils.randFloat(-20,20),
-			THREE.MathUtils.randFloat(0,50),
-		THREE.MathUtils.randFloat(0,200)
-		]
-		star.position.set(x, y, z)
-		scene.add(star)
-	  }
-	//===============assets
-	//fall tree
-	gtloader.load('assets/models/falltree/model.gltf',
-	(gltfmodel)=>{
-	const tree= gltfmodel.scene
-	
-	tree.scale.setScalar(1)
-	tree.position.set(0,3,22)
-	//g(tree)
-	tree.children[2].visible=false
-	let i=0
-	while(i<6){
-		addrandomonfloor(tree.clone(),3)
-		i++
-	}
-	})//bldr
-	gtloader.load('assets/models/bouldar/boulder_03.gltf',
-	(gltfmodel)=>{
-	const bldr= gltfmodel.scene
-	bldr.scale.setScalar(0.01)
-	bldr.position.set(0,0,22)
-	bldr.children[2].visible=false
-	//g('bldr')
-	//g(bldr)
-	bldr.rotation.y+=Math.PI/2
-	bldr.children[2].visible=false
-	let i=0
-	while(i<3){
-		addrandomonfloor(bldr.clone(),0)
-		i++
-	}
-	})
-	//cactus
-	gtloader.load('assets/models/cactus/PipeOrganCactus.gltf',
-	(gltfmodel)=>{
-	const cactus= gltfmodel.scene
-	cactus.scale.setScalar(0.3)
-	cactus.position.set(0,0,22)
-	cactus.children[2].visible=false
-	//g('bldr')
-	//g(bldr)
-	let i=0
-	while(i<7){
-		addrandomonfloor(cactus.clone(),0)
-		i++
-	}
-	})
-	//been
-	gtloader.load('assets/models/beanstalk/PUSHILIN_Beanstalk.gltf',
-	(gltfmodel)=>{
-	const bean= gltfmodel.scene
-	bean.scale.setScalar(1)
-	bean.position.set(0,0,22)
-	bean.children[2].visible=false
-	//g('bldr')
-	//g(bldr)
-	let i=0
-	while(i<7){
-		addrandomonfloor(bean.clone(),0)
-		i++
-	}
-	})
-	//babmm
-	gtloader.load('assets/models/bamboo/PUSHILIN_bamboo.gltf',
-	(gltfmodel)=>{
-	const bamboo= gltfmodel.scene
-//	bamboo.scale.setScalar(0.3)
-	bamboo.children[2].visible=false
-	//g('bldr')
-	//g(bldr)
-	let i=0
-
-	while(i<7){
-		addrandomonfloor(bamboo.clone(),1)
-		i++
-	}
-	})
-	//willow
-	gtloader.load('assets/models/weepwillow/WeepingWillowTree.gltf',
-	(gltfmodel)=>{
-	const tree= gltfmodel.scene.children[0]
-	tree.scale.setScalar(0.5)
-	//g(tree)
-	 let i=0
-	 while(i<6){
-	 	addrandomonfloor(tree.clone())
-	 	i++
-	 }
-	})
-
-	function addrandomonfloor(obj:THREE.Object3D,yoffset?:number) {
-		const [x, z] =[
-		THREE.MathUtils.randFloat(-30,30),
-		THREE.MathUtils.randFloat(0,200)
-		]
-		obj.position.set(x, yoffset||0, z)
-		scene.add(obj)
-	  }
-  
-	let znow=16;  
-	for(let i=0;i<500;i++)addStar(); 
+	//add floor
+	addFloor(scene)
+	addEnv(scene)
 	mesh.position.y += 3
 	mesh.position.z=2
    // Move the mesh up 1 meter
-	scene.add(mesh)
+
+   let znow=16;  	
+   scene.add(mesh)
+   const gtloader = new GLTFLoader()
 	//skill board 3d model
 	await gtloader.load( 'assets/models/construction_barricades/scene.gltf', function ( gltfmodel ) {
 		const gltf=gltfmodel.scene
@@ -288,10 +94,10 @@ scene.add(faceCube);
 		   skillBoard.rotation.y+=Math.PI
 		   scene.add(skillBoard)
 		 }
-		 for(let i=0;i<tool.length;i++){
+		 for(let i=0;i<myTools.length;i++){
 			const geometry = new THREE.PlaneGeometry(0.3,0.3)
 			const material = new THREE.MeshStandardMaterial({
-				map:new THREE.TextureLoader().load(tool[i].image),
+				map:new THREE.TextureLoader().load(myTools[i].image),
 				transparent:true
 			  //  displacementScale:-1
 			  })

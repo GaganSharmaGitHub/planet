@@ -39,7 +39,7 @@ section.section p{
   max-width: 500px;
 
 }
-section.section p.skillToken{
+section#skillSection p.skillToken{
   width: 250px;
   display: flex;
   flex-wrap: wrap;
