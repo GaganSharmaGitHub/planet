@@ -1221,10 +1221,10 @@
       "uri": "textures/SignStripedBoards_baseColor.png"
     },
     {
-      "uri": "textures/SignStripedBoards_metallicRoughness.png"
+      "uri": "textures/SignStripedBoards_metallicRoughness.jpeg"
     },
     {
-      "uri": "textures/SignStripedBoards_emissive.jpeg"
+      "uri": "textures/SignStripedBoards_metallicRoughness.jpeg"
     },
     {
       "uri": "textures/SignStripedBoards_normal.png"
@@ -1348,15 +1348,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 2,
-        "texCoord": 0
-      },
+      
       "name": "ConeBodyOrange",
       "normalTexture": {
         "index": 3,
@@ -1390,15 +1382,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 6,
-        "texCoord": 0
-      },
+      
       "name": "ConeWhiteStripes",
       "normalTexture": {
         "index": 7,
@@ -1432,15 +1416,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 10,
-        "texCoord": 0
-      },
+      
       "name": "ConeBaseOrange",
       "normalTexture": {
         "index": 11,
@@ -1474,15 +1450,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 14,
-        "texCoord": 0
-      },
+      
       "name": "SignStripedBoards",
       "normalTexture": {
         "index": 15,
@@ -1516,15 +1484,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 18,
-        "texCoord": 0
-      },
+      
       "name": "MetalStuds",
       "normalTexture": {
         "index": 19,
@@ -1558,15 +1518,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 22,
-        "texCoord": 0
-      },
+      
       "name": "SignLegs",
       "normalTexture": {
         "index": 23,
@@ -1600,15 +1552,6 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 26,
-        "texCoord": 0
-      },
       "name": "RoadClosedSign",
       "normalTexture": {
         "index": 27,
@@ -1642,15 +1585,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 30,
-        "texCoord": 0
-      },
+      
       "name": "ReflectorShell",
       "normalTexture": {
         "index": 31,
@@ -1684,11 +1619,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      
       "emissiveTexture": {
         "index": 34,
         "texCoord": 0
@@ -1726,16 +1657,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 38,
-        "texCoord": 0
-      },
-      "name": "ReflectorBlack",
+       "name": "ReflectorBlack",
       "normalTexture": {
         "index": 39,
         "scale": 1,
@@ -1768,11 +1690,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      
       "emissiveTexture": {
         "index": 22,
         "texCoord": 0
@@ -1810,15 +1728,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 44,
-        "texCoord": 0
-      },
+      
       "name": "ConstructionSignBase",
       "normalTexture": {
         "index": 45,
@@ -1852,15 +1762,8 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 48,
-        "texCoord": 0
-      },
+      
+      
       "name": "ConstructionSignMetal",
       "normalTexture": {
         "index": 49,
@@ -1894,15 +1797,7 @@
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "emissiveTexture": {
-        "index": 52,
-        "texCoord": 0
-      },
+      
       "name": "ConstructionSignDecal",
       "normalTexture": {
         "index": 53,
