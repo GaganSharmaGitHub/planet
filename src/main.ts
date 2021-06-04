@@ -1,7 +1,6 @@
 import './style.css'
 import * as THREE from 'three'
 import { headerScroll } from './headScroll'
-import {skillCard} from './creatEle'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import {allSkills,myTools} from './data'
 import { addFloor } from './addFloor'
@@ -89,7 +88,7 @@ scene.add(faceCube);
 		   hoard.position.set(0.6,-0.2,0.05)
 		   skillBoard.add(hoard)
 		   ////g(allSkills[i])
-		   znow+= 1.5
+		   znow+= 1.3
 		   skillBoard.position.set(1.5,1,znow)
 		   skillBoard.rotation.y+=Math.PI
 		   scene.add(skillBoard)
@@ -105,7 +104,7 @@ scene.add(faceCube);
 			const skillBoard = plankboard.clone()
 			hoard.position.set(0.6,-0.2,0.05)
 			skillBoard.add(hoard)
-			znow+= 1.5
+			znow+= 1.3
 			skillBoard.position.set(1.5,1,znow)
 			skillBoard.rotation.y+=Math.PI
 			scene.add(skillBoard)

@@ -30,22 +30,38 @@ section.section h2{
   top: 0;
   background-color: brown;
 }
-section.section p{
-  display: inline-block;
-  padding: 20px;
-  margin: 10px;
-  background-color: brown;
-  font-size: large;
-  max-width: 500px;
-
+section#projectSection div.projectCard{
+  background-color: green;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  max-width: 80vw;
 }
+
+section#projectSection div.projectCard img{
+  width: 200px;
+  height: 200px;
+  padding: 10px; 
+}
+
+section#projectSection div.projectCard div{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;  
+}
+/* section#projectSection div.projectCard p.allTech{
+  
+} */
 section#skillSection p.skillToken{
   width: 250px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-
+  padding: 10px;
+  margin: 10px;
   background-color: blue;
 }
 #skillSection{

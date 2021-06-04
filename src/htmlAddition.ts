@@ -1,5 +1,6 @@
-import {allSkills,myTools} from './data'
-import {skillCard} from './creatEle'
+import {allSkills,myTools,allProjects} from './data'
+import {skillCard,projectCard} from './creatEle'
+
 export function addHTML(){
     //skill section elemments
 	const skillSec=document.querySelector('#skillSection')!
@@ -10,5 +11,8 @@ export function addHTML(){
 	myTools.forEach((t)=>{
 		skillSec.appendChild(skillCard({...t,level:0}))
 	})
-	
+	const projectSec=document.querySelector('#projectSection')!
+	allProjects.forEach(p=>{
+        projectSec.appendChild(projectCard(p))
+    })
 }
