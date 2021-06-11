@@ -1,4 +1,3 @@
-
 import * as THREE from 'three'
 
 export function addFloor(scene:THREE.Scene){
@@ -39,4 +38,20 @@ export function addFloor(scene:THREE.Scene){
 	meshFloor.rotation.x -= Math.PI / 2 // Rotate the floor 90 degrees
 	//TODO
 	scene.add(meshFloor)
+	const farmTexture = new THREE.TextureLoader().load('assets/planet/farm.jpg')
+	farmTexture.wrapS= THREE.RepeatWrapping
+	farmTexture.wrapT= THREE.RepeatWrapping
+	farmTexture.offset.set( 0, 0 )
+	farmTexture.repeat.set( 4, 1 )
+    
+	const farmFloor = new THREE.Mesh(
+		new THREE.PlaneGeometry(100,25, 10,10),
+		new THREE.MeshStandardMaterial({
+			map: farmTexture,
+		})
+	)
+	farmFloor.rotation.x -= Math.PI / 2 
+	farmFloor.position.set(0,0.1,50)
+	scene.add(farmFloor)
+
 }

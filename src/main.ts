@@ -6,6 +6,7 @@ import {allSkills,myTools} from './data'
 import { addFloor } from './addFloor'
 import { addHTML } from './htmlAddition'
 import { addEnv } from './addEnv'
+import { addInfra } from './addInfra'
 //import { DirectionalLight } from 'three'
 const app = document.querySelector<HTMLCanvasElement>('#bg')!
 const scene = new THREE.Scene()
@@ -58,6 +59,7 @@ scene.add(faceCube);
    let znow=16;  	
    scene.add(mesh)
    const gtloader = new GLTFLoader()
+   addInfra(scene)
 	//skill board 3d model
 	await gtloader.load( 'assets/models/construction_barricades/scene.gltf', function ( gltfmodel ) {
 		const gltf=gltfmodel.scene
@@ -73,7 +75,7 @@ scene.add(faceCube);
 			plankboard.children[0].children[0].children[0].children[i].visible=false
 		}
 	}
-	standboard.position.set(1.5,1,15)
+	standboard.position.set(2,1,15)
 	standboard.rotation.y+=Math.PI
 	scene.add(standboard)
 		for(let i=0;i<allSkills.length;i++){
@@ -88,8 +90,8 @@ scene.add(faceCube);
 		   hoard.position.set(0.6,-0.2,0.05)
 		   skillBoard.add(hoard)
 		   ////g(allSkills[i])
-		   znow+= 1.3
-		   skillBoard.position.set(1.5,1,znow)
+		   znow+= 1.2
+		   skillBoard.position.set(2,1,znow)
 		   skillBoard.rotation.y+=Math.PI
 		   scene.add(skillBoard)
 		 }
@@ -104,61 +106,14 @@ scene.add(faceCube);
 			const skillBoard = plankboard.clone()
 			hoard.position.set(0.6,-0.2,0.05)
 			skillBoard.add(hoard)
-			znow+= 1.3
-			skillBoard.position.set(1.5,1,znow)
+			znow+= 1.2
+			skillBoard.position.set(2,1,znow)
 			skillBoard.rotation.y+=Math.PI
 			scene.add(skillBoard)
 		  }
 	}, undefined, function ( error ) {
 	console.error( error )
 	} )
-	gtloader.load('assets/models/buld/Bulldozer.gltf',
-	(gltfmodel)=>{
-	const bulldozer= gltfmodel.scene
-	
-	bulldozer.scale.setScalar(0.3)
-	bulldozer.position.set(-4,0.1,22)
-	//g(bulldozer)
-	bulldozer.children[2].visible=false
-	bulldozer.rotateY(3*Math.PI/4)
-	scene.add(bulldozer)
-	})
-	//truck
-	gtloader.load('assets/models/dumbtruck/Dump_Truck_01.gltf',
-	(gltfmodel)=>{
-	const truck= gltfmodel.scene
-	truck.children[2].visible=false
-	truck.scale.setScalar(0.3)
-	//g('scaffold')
-	truck.position.set(-4,0,30)
-	truck.rotateY(3*Math.PI/4)
-	scene.add(truck)
-	},undefined,console.log)
-	// constr house
-	gtloader.load('assets/models/cabin/Cabin 2.gltf',
-	(gltfmodel)=>{
-	const house= gltfmodel.scene
-	house.scale.setScalar(0.01)
-	//g('scaffold00')
-	house.children[2].visible=false
-
-	house.position.set(-15,0,40)
-	house.rotateY(3*Math.PI/4)
-	scene.add(house)
-	},undefined,console.log)
-	//wood
-	gtloader.load('assets/models/woodpile/model.gltf',
-	(gltfmodel)=>{
-	const wpile= gltfmodel.scene
-	wpile.scale.setScalar(4)
-	//g('plants')
-	//g(gltfmodel)
-	console.log('wp',wpile)
-
-	wpile.position.set(7,-5,30)
-	wpile.rotateY(3*Math.PI/4)
-	scene.add(wpile)
-	},undefined,console.log)
 })()
 
 function keyDown(event:KeyboardEvent){

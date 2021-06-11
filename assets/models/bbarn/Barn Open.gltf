@@ -2,27 +2,29 @@
    "accessors" : [
       {
          "bufferView" : 0,
+         "byteOffset" : 0,
          "componentType" : 5123,
-         "count" : 19188,
-         "max" : [ 19187 ],
+         "count" : 19404,
+         "max" : [ 19403 ],
          "min" : [ 0 ],
          "name" : "buffer-0-accessor-indices-buffer-0-mesh-0",
          "type" : "SCALAR"
       },
       {
          "bufferView" : 2,
+         "byteOffset" : 0,
          "componentType" : 5126,
-         "count" : 19188,
-         "max" : [ 4542.830078125, 2916.449951171875, 3732.333984375 ],
-         "min" : [ -4450, -2666.25, -2750 ],
+         "count" : 19404,
+         "max" : [ 4950, 2916.449951171875, 5150 ],
+         "min" : [ -4950, -3225, -4750 ],
          "name" : "buffer-0-accessor-position-buffer-0-mesh-0",
          "type" : "VEC3"
       },
       {
          "bufferView" : 2,
-         "byteOffset" : 230256,
+         "byteOffset" : 232848,
          "componentType" : 5126,
-         "count" : 19188,
+         "count" : 19404,
          "max" : [ 1, 1, 1 ],
          "min" : [ -1, -1, -1 ],
          "name" : "buffer-0-accessor-normal-buffer-0-mesh-0",
@@ -30,8 +32,9 @@
       },
       {
          "bufferView" : 1,
+         "byteOffset" : 0,
          "componentType" : 5126,
-         "count" : 19188,
+         "count" : 19404,
          "max" : [ 0.9784539937973022, 0 ],
          "min" : [ 0, -0.9889150261878967 ],
          "name" : "buffer-0-accessor-texcoord-buffer-0-mesh-0",
@@ -39,6 +42,7 @@
       },
       {
          "bufferView" : 3,
+         "byteOffset" : 0,
          "componentType" : 5126,
          "count" : 0,
          "max" : [ 0, 0, 0, 0 ],
@@ -57,23 +61,24 @@
    "bufferViews" : [
       {
          "buffer" : 0,
-         "byteLength" : 38376,
+         "byteLength" : 38808,
+         "byteOffset" : 0,
          "byteStride" : 0,
          "name" : "buffer-0-bufferview-ushort",
          "target" : 34963
       },
       {
          "buffer" : 0,
-         "byteLength" : 153504,
-         "byteOffset" : 38376,
+         "byteLength" : 155232,
+         "byteOffset" : 38808,
          "byteStride" : 8,
          "name" : "buffer-0-bufferview-vec2",
          "target" : 34962
       },
       {
          "buffer" : 0,
-         "byteLength" : 460512,
-         "byteOffset" : 191880,
+         "byteLength" : 465696,
+         "byteOffset" : 194040,
          "byteStride" : 12,
          "name" : "buffer-0-bufferview-vec3",
          "target" : 34962
@@ -81,14 +86,15 @@
       {
          "buffer" : 0,
          "byteLength" : 1,
+         "byteOffset" : 0,
          "name" : "buffer-0-bufferview-vec4"
       }
    ],
    "buffers" : [
       {
-         "byteLength" : 652400,
+         "byteLength" : 659744,
          "name" : "buffer-0",
-         "uri" : "Barn no ground.bin"
+         "uri" : "Barn Open.bin"
       }
    ],
    "cameras" : [
@@ -136,11 +142,14 @@
    ],
    "materials" : [
       {
+         "alphaMode" : "OPAQUE",
          "doubleSided" : true,
          "name" : "lambert6SG",
          "pbrMetallicRoughness" : {
+            "baseColorFactor" : [ 1, 1, 1, 1 ],
             "baseColorTexture" : {
-               "index" : 0
+               "index" : 0,
+               "texCoord" : 0
             },
             "metallicFactor" : 0,
             "roughnessFactor" : 0.9699476628648295
@@ -158,7 +167,8 @@
                   "TEXCOORD_0" : 3
                },
                "indices" : 0,
-               "material" : 0
+               "material" : 0,
+               "mode" : 4
             }
          ]
       }
@@ -176,22 +186,22 @@
          "extras" : {
             "isTransformNode" : 1
          },
-         "translation" : [ -121.343046320783, -564.7368524776094, 18.31926133925708 ]
+         "translation" : [ -88.68388791593641, -1069.603395692521, 224.75 ]
       },
       {
          "children" : [ 0 ],
-         "translation" : [ 121.343046320783, 564.7368524776094, -18.31926133925708 ]
+         "translation" : [ 88.68388791593641, 1069.603395692521, -224.75 ]
       },
       {
          "camera" : 0,
          "children" : [ 5 ],
          "rotation" : [
-            -0.1233659990023608,
-            -0.2950837684894682,
-            -0.03845312200597497,
-            0.9466930639189225
+            -0.2044767184714895,
+            -0.2486286681474361,
+            -0.05378393441208023,
+            0.9452408927768206
          ],
-         "translation" : [ -9077.124166760061, 3610.04520755765, 12994.78551726837 ]
+         "translation" : [ -7468.495075905633, 5746.901899239235, 13293.04814753662 ]
       },
       {
          "extensions" : {
@@ -203,7 +213,7 @@
             "isHeadLight" : 1
          },
          "name" : "headLightNode",
-         "translation" : [ -6409.414685696966, 3204.707342848483, 3204.707342848483 ]
+         "translation" : [ -8311.207935028046, 4155.603967514023, 4155.603967514023 ]
       },
       {
          "extensions" : {
@@ -216,8 +226,8 @@
          },
          "name" : "keyLightNode",
          "rotation" : [ -0.7505326882858236, -0.3752663441429118, 0, 0.5439447166468927 ],
-         "scale" : [ 0, 0, 6473.508832553936 ],
-         "translation" : [ -6437.983012408497, 12122.10282217505, -6108.2550605289 ]
+         "scale" : [ 0, 0, 8394.320014378327 ],
+         "translation" : [ -8358.907940974404, 15943.90053738654, -7989.926137637507 ]
       }
    ],
    "samplers" : [
@@ -232,7 +242,7 @@
       {
          "extensions" : {
             "GOOGLE_backgrounds" : {
-               "color" : [ 0.803921568627451, 0.8627450980392157, 0.2235294117647059 ]
+               "color" : [ 1, 0.596078431372549, 0 ]
             },
             "GOOGLE_camera_settings" : {}
          },
@@ -243,14 +253,14 @@
             },
             "GOOGLE_geometry_data" : {
                "stats" : {
-                  "centroid" : [ 35.52582014543901, -824.9148429328261, 365.2537720250368 ],
-                  "radius" : 6409.414685696966,
-                  "stdev" : 3388.333959746129
+                  "centroid" : [ 35.41207340392248, -844.739491370112, 404.3938767408199 ],
+                  "radius" : 8311.207935028046,
+                  "stdev" : 3421.790071923015
                },
-               "visualCenterPoint" : [ -121.343046320783, -564.7368524776094, 18.31926133925708 ]
+               "visualCenterPoint" : [ -88.68388791593641, -1069.603395692521, 224.75 ]
             },
             "GOOGLE_hemi_light" : {
-               "groundColor" : [ 0.803921568627451, 0.8627450980392157, 0.2235294117647059 ]
+               "groundColor" : [ 1, 0.596078431372549, 0 ]
             }
          },
          "name" : "scene-0",
