@@ -87,47 +87,82 @@ export const allProjects: Project[]=[
     },
 ]
 export const allSkills:Skill[]=[
-	{image:'assets/logo/Python-logo.png',
+	{image:'assets/logo/js.png',
 	title:'Javascript',
 	level:5
     },
-	{image:'assets/logo/Python-logo.png',
+	{image:'assets/logo/java.png',
 	title:'Java',
 	level:5},
-	{
-	image:'assets/logo/Python-logo.png',
+	
+    {
+        image:'assets/logo/node.png',
+        title:'NodeJs',
+        level:5,
+    },{
+	image:'assets/logo/flutter.png',
 	title:'Flutter',
 	level:5
 	},
 	{
-		image:'assets/logo/Python-logo.png',
+		image:'assets/logo/react.png',
 		title:'React',
-		level:5,
+		level:4,
 		},
 		
 	{
-		image:'assets/logo/Python-logo.png',
-		title:'PYTHON',
-		level:3,
+		image:'assets/logo/Dart.png',
+		title:'Dart',
+		level:5,
 	},
-		
-	{image:'assets/logo/Python-logo.png',
+    {
+        image:'assets/logo/mongo.png',
+        title:'MongoDB',
+        level:5,
+    },
+    		
+	{image:'assets/logo/html.png',
 	title:'HTML',
 	level:5,
 	},
-	{
-	image:'assets/logo/Python-logo.png',
-	title:'Dart',
-	level:5,
-	},
-	
-	{
-	image:'assets/my.jpg',
-	title:'CSS',
-	level:5,
-	},
+    {
+        image:'assets/logo/css.png',
+        title:'CSS',
+        level:5,
+    },
+    {
+        image:'assets/logo/Python-logo.png',
+        title:'Python',
+        level:5,
+    },
+    
+               
 ]
-export const myTools:Tool[]=allSkills
+export const myTools:Tool[]=[
+    {
+        image:'assets/logo/git.png',
+        title:'Git', 
+    },
+    {
+        image:'assets/logo/vscode.png',
+        title:'Visual Studio Code', 
+    },{
+        image:'assets/logo/bootstrap.png',
+        title:'Bootstrap', 
+    },{
+        image:'assets/logo/firebase.png',
+        title:'Firebase', 
+    },{
+        image:'assets/logo/ts.png',
+        title:'Typescript', 
+    },{
+        image:'assets/logo/postman.png',
+        title:'Postman', 
+    },{
+        image:'assets/logo/sass.png',
+        title:'SCSS', 
+    },
+]
 
 export const myExp:Exp[]=[
     {
