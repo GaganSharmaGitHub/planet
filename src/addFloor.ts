@@ -45,13 +45,13 @@ export function addFloor(scene:THREE.Scene){
 	farmTexture.repeat.set( 4, 1 )
     
 	const farmFloor = new THREE.Mesh(
-		new THREE.PlaneGeometry(100,25, 10,10),
+		new THREE.PlaneGeometry(100,19, 10,10),
 		new THREE.MeshStandardMaterial({
 			map: farmTexture,
 		})
 	)
 	farmFloor.rotation.x -= Math.PI / 2 
-	farmFloor.position.set(0,0.1,50)
+	farmFloor.position.set(0,0.1,46)
 	scene.add(farmFloor)
 
 }

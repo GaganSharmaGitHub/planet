@@ -15,6 +15,14 @@ export interface Project{
     link:string,
     description:string,
 }
+export interface Exp{
+    company:string,
+    image:string,
+    role:string,
+    time:string,
+    points:string[],
+}
+
 export const allProjects: Project[]=[
     {
         description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
@@ -120,3 +128,25 @@ export const allSkills:Skill[]=[
 	},
 ]
 export const myTools:Tool[]=allSkills
+
+export const myExp:Exp[]=[
+    {
+        company:'India Health Link',
+        role:'Flutter Developer Intern',
+        points:['Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff',],
+        image:'assets/logo/node.png',
+        time:'June 2020 - August 2020'
+    },{
+        company:'India Health Link',
+        role:'Flutter Developer Intern',
+        points:['Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff',],
+        image:'assets/logo/node.png',
+        time:'June 2020 - August 2020'
+    },{
+        company:'India Health Link',
+        role:'Flutter Developer Intern',
+        points:['Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff',],
+        image:'assets/logo/node.png',
+        time:'June 2020 - August 2020'
+    },
+]

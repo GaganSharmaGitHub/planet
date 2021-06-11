@@ -1,9 +1,8 @@
-import {Skill,Project} from './data'
+import {Skill,Project, Exp} from './data'
 export const skillCard=(skill:Skill):HTMLElement=>{
- const el= document.createElement('p')
- el.className="skillToken"
+ const el= document.createElement('div')
+ el.className="skillCard"
  el.innerHTML=`
- <p class="skillToken">
             <img src="${skill.image}" width="50px" alt="">
             <span>${skill.title}</span>
             <span>
@@ -14,10 +13,9 @@ export const skillCard=(skill:Skill):HTMLElement=>{
 }
 
 export const projectCard=(project:Project):HTMLElement=>{
-  const el= document.createElement('p')
-  el.className="skillToken"
+  const el= document.createElement('div')
+  el.className="projectCard"
   el.innerHTML=`
-  <div class="projectCard">
             <img src="${project.image}" alt="Amuzic">
             <div>
             <h4>
@@ -31,27 +29,26 @@ export const projectCard=(project:Project):HTMLElement=>{
             </p>
             <a href="${project.link}">explore</a>
             </div>
-          </div>
   `
   return el   
  }
-/**
-  <div class="projectCard">
-            <img src="assets/logo/node.png" alt="Amuzic">
-            <div>
-            <h4>
-              Amuzic
-            </h4>
-            <p class="allTech">
-              <span>flutter</span>
-              <span>flutter</span>
-              <span>flutter</span>
-              <span>flutter</span>
-            </p>
-            <p class="description">
-            description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-            </p>
-            <a href="link">explore</a>
-            </div>
-          </div>
- */
+
+ 
+export const expCard=(exp:Exp):HTMLElement=>{
+  const el= document.createElement('div')
+  el.className="expCard"
+  el.innerHTML=`
+  <img src="${exp.image}" alt="${exp.company}">
+  <div class="textCont">  
+    <h3>${exp.company}</h3>
+    <h4>${exp.role},</h4> 
+    <span class="time">${exp.time}</span>
+    <ul class="companypoints">
+    ${exp.points.map((p)=>
+      `<li>${p}</li>`
+      )}
+    </ul>
+  </div>
+  `
+  return el   
+ }

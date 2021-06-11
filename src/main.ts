@@ -14,7 +14,6 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer({
   canvas: app,
 })
-const keyboard:any = {}
 const player = { height:1.8, speed:0.2, turnSpeed:Math.PI*0.02 }
 //mesh
 let mesh = new THREE.Mesh(
@@ -116,17 +115,17 @@ scene.add(faceCube);
 	} )
 })()
 
-function keyDown(event:KeyboardEvent){
-	keyboard[event.keyCode] = true
-	if(event.key=='g') console.log(camera.position)
-}
+// function keyDown(event:KeyboardEvent){
+// 	keyboard[event.keyCode] = true
+// 	if(event.key=='g') console.log(camera.position)
+// }
 
-function keyUp(event:KeyboardEvent){
-	keyboard[event.keyCode] = false
-}
+// function keyUp(event:KeyboardEvent){
+// 	keyboard[event.keyCode] = false
+// }
 
-window.addEventListener('keydown', keyDown)
-window.addEventListener('keyup', keyUp)
+// window.addEventListener('keydown', keyDown)
+// window.addEventListener('keyup', keyUp)
 //handle scroll
 const handleScroll=(_e:Event)=>{
 	const pos= window.scrollY
@@ -150,32 +149,32 @@ function animate() {
 	mesh.rotation.z += 0.02
 	faceCube.rotation.y += 0.02
 	
-	// Keyboard movement inputs
-	if(keyboard[87]){ // W key
-	//	camera.position.x -= Math.sin(camera.rotation.y) * player.speed
-		camera.position.z -= -Math.cos(camera.rotation.y) * player.speed
-	}
-	if(keyboard[83]){ // S key
-	//	camera.position.x += Math.sin(camera.rotation.y) * player.speed
-		camera.position.z += -Math.cos(camera.rotation.y) * player.speed
-	}
-	if(keyboard[65]){ // A key
-		// Redirect motion by 90 degrees
-		camera.position.x += Math.sin(camera.rotation.y + Math.PI/2) * player.speed
-		camera.position.z += -Math.cos(camera.rotation.y + Math.PI/2) * player.speed
-	}
-	if(keyboard[68]){ // D key
-		camera.position.x += Math.sin(camera.rotation.y - Math.PI/2) * player.speed
-		camera.position.z += -Math.cos(camera.rotation.y - Math.PI/2) * player.speed
-	}
+	// // Keyboard movement inputs
+	// if(keyboard[87]){ // W key
+	// //	camera.position.x -= Math.sin(camera.rotation.y) * player.speed
+	// 	camera.position.z -= -Math.cos(camera.rotation.y) * player.speed
+	// }
+	// if(keyboard[83]){ // S key
+	// //	camera.position.x += Math.sin(camera.rotation.y) * player.speed
+	// 	camera.position.z += -Math.cos(camera.rotation.y) * player.speed
+	// }
+	// if(keyboard[65]){ // A key
+	// 	// Redirect motion by 90 degrees
+	// 	camera.position.x += Math.sin(camera.rotation.y + Math.PI/2) * player.speed
+	// 	camera.position.z += -Math.cos(camera.rotation.y + Math.PI/2) * player.speed
+	// }
+	// if(keyboard[68]){ // D key
+	// 	camera.position.x += Math.sin(camera.rotation.y - Math.PI/2) * player.speed
+	// 	camera.position.z += -Math.cos(camera.rotation.y - Math.PI/2) * player.speed
+	// }
 	
-	// Keyboard turn inputs
-	if(keyboard[37]){ // left arrow key
-		camera.rotation.y -= player.turnSpeed
-	}
-	if(keyboard[39]){ // right arrow key
-		camera.rotation.y += player.turnSpeed
-	}
+	// // Keyboard turn inputs
+	// if(keyboard[37]){ // left arrow key
+	// 	camera.rotation.y -= player.turnSpeed
+	// }
+	// if(keyboard[39]){ // right arrow key
+	// 	camera.rotation.y += player.turnSpeed
+	// }
   renderer.render(scene, camera)
 }
 animate()
