@@ -23,69 +23,6 @@ export interface Exp{
     points:string[],
 }
 
-export const allProjects: Project[]=[
-    {
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },
-]
 export const allSkills:Skill[]=[
 	{image:'assets/logo/js.png',
 	title:'Javascript',
@@ -164,6 +101,69 @@ export const myTools:Tool[]=[
     },
 ]
 
+export const allProjects: Project[]=[
+    {
+        description:'REST API for a Twitter like social media platform',
+        image:'assets/projects/hap.png',
+        link:'https://github.com/GaganSharmaGitHub/happening',
+        tech:['Javascript','NodeJS','MongoDB','Express','Typescript'],
+        title:'Happening'
+    },{
+        description:'the amazing music app powered with flutter',
+        image:'assets/projects/amuzicLogo.png',
+        link:'https://github.com/GaganSharmaGitHub/Amuzic',
+        tech:['Flutter','Firebase','YouTube API'],
+        title:'Amuzic'
+    },{
+        description:"A smart home web app that allows you to monitor your home's temperature, door, and lets you turn devices on or off from any corner of world",
+        image:'assets/projects/smarthomelogo.svg',
+        link:'ok.com',
+        tech:['Javascript','IoT','HTML','CSS'],
+        title:'SmartHome'
+    },{
+        description:'A bat killing game using HTML5 canvas',
+        image:'assets/projects/batslayer.png',
+        link:'ok.com',
+        tech:['Javascript','HTML','CSS'],
+        title:'BatSlayer'
+    },{
+        description:'Classic tic-tac-toe game in react native',
+        image:'assets/projects/Tic_tac_toe.png',
+        link:'ok.com',
+        tech:['Javascript','React Native',],
+        title:'Tic-Tac-Toe'
+    },{
+        description:'Basic Weather App',
+        image:'assets/projects/weather.png',
+        link:'ok.com',
+        tech:['Javascript','React'],
+        title:'Weather Now'
+    },{
+        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
+        image:'assets/logo/node.png',
+        link:'ok.com',
+        tech:['Flutter','Firebase','YTAPI'],
+        title:'Amuzic'
+    },{
+        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
+        image:'assets/logo/node.png',
+        link:'ok.com',
+        tech:['Flutter','Firebase','YTAPI'],
+        title:'Amuzic'
+    },{
+        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
+        image:'assets/logo/node.png',
+        link:'ok.com',
+        tech:['Flutter','Firebase','YTAPI'],
+        title:'Amuzic'
+    },{
+        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
+        image:'assets/logo/node.png',
+        link:'ok.com',
+        tech:['Flutter','Firebase','YTAPI'],
+        title:'Amuzic'
+    },
+]
 export const myExp:Exp[]=[
     {
         company:'India Health Link',
@@ -178,6 +178,13 @@ export const myExp:Exp[]=[
         image:'assets/logo/node.png',
         time:'June 2020 - August 2020'
     },{
+        company:'India Health Link',
+        role:'Flutter Developer Intern',
+        points:['Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff',],
+        image:'assets/logo/node.png',
+        time:'June 2020 - August 2020'
+    },
+    {
         company:'India Health Link',
         role:'Flutter Developer Intern',
         points:['Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff',],
