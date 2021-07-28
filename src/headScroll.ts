@@ -1,6 +1,10 @@
 
 export const headerScroll=(position: number)=>{
-const ship=document.querySelector<HTMLElement>('div#ship')!
+    const ship = document.querySelector<HTMLElement>('div#ship')!
+    if (position > 300) {
+        ship.style.opacity = '0'
+        return;
+    }
 //const head=document.querySelector('header')
 ship.style.opacity='1'
 

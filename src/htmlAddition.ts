@@ -1,5 +1,5 @@
-import {allSkills,myTools,allProjects,myExp} from './data'
-import {skillCard,projectCard,expCard} from './creatEle'
+import {allSkills,myTools,allProjects,myExp, allContacts} from './data'
+import {skillCard,projectCard,expCard, contactCard} from './creatEle'
 
 export function addHTML(){
     //skill section elemments
@@ -19,5 +19,10 @@ export function addHTML(){
 	const expSec=document.querySelector('#expList')!
 	myExp.forEach(e=>{
         expSec.appendChild(expCard(e))
-    })
+	})
+	const contactSec = document.querySelector('#contactList')!
+	allContacts.map(e => {
+		contactSec.appendChild(contactCard(e))
+	})
+	
 }

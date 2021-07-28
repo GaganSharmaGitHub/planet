@@ -22,7 +22,11 @@ export interface Exp{
     time:string,
     points:string[],
 }
-
+export interface Contact{
+    platform: string,
+    link: string,
+    username:string
+}
 export const allSkills:Skill[]=[
 	{image:'assets/logo/js.png',
 	title:'Javascript',
@@ -138,57 +142,54 @@ export const allProjects: Project[]=[
         link:'ok.com',
         tech:['Javascript','React'],
         title:'Weather Now'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },{
-        description:'manage lorenm ispnjnfebuebfbchebhfhmehbdebiufbuebfekjbj',
-        image:'assets/logo/node.png',
-        link:'ok.com',
-        tech:['Flutter','Firebase','YTAPI'],
-        title:'Amuzic'
-    },
+    }
 ]
 export const myExp:Exp[]=[
     {
-        company:'India Health Link',
+        company:'India Health Link, Chennai IN',
         role:'Flutter Developer Intern',
-        points:['Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff',],
-        image:'assets/logo/node.png',
+        points:["Company focusing on preventive healthcare","Worked with a team in developing mobile application","Responsible for implementing various key features of app",],
+        image:'assets/company/ihl.jpg',
         time:'June 2020 - August 2020'
     },{
-        company:'India Health Link',
-        role:'Flutter Developer Intern',
-        points:['Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff',],
-        image:'assets/logo/node.png',
-        time:'June 2020 - August 2020'
+        company:'Raahee, Delhi IN',
+        role:'Lead Software Developer',
+        points:["A project funded by Cisco Thingqbator, Nasscom"," Worked as a team lead to develop and deploy applications for","Mental Health Professionals."," Built 2 cross platform applications using Flutter framework."," Designed and implemented a realtime chat server in Node.js.",],
+        image:'assets/company/raahee.png',
+        time:'November 2020 - Present'
     },{
-        company:'India Health Link',
-        role:'Flutter Developer Intern',
-        points:['Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff',],
-        image:'assets/logo/node.png',
-        time:'June 2020 - August 2020'
+        company:'AviIndia Pvt. Ltd., Delhi IN',
+        role:'Freelance Developer',
+        points:["Developed and delivered loan advice app","Built using Flutter and firebase","Integrated Facebook Audience Network ads"],
+        image:'assets/company/aviin.png',
+        time:'October 2020 - November 2020'
     },
     {
-        company:'India Health Link',
-        role:'Flutter Developer Intern',
-        points:['Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff','Comapny whichdoes some pretty rad stuff',],
-        image:'assets/logo/node.png',
+        company:'CrowdSurf, Stanford CA',
+        role:'Lead Software Developer',
+        points:["A social planning app to drive forward real-life interactions for Generation Z.", "Building a cross-platform app using the Flutter framework.","Designing and implementing web services in firebase."],
+        image:'assets/company/Crowdsurf.png',
         time:'June 2020 - August 2020'
     },
+]
+export const allContacts: Contact[] = [
+    {
+        link: "mailto:gagan3103sharma2000@gmail.com",
+        username:"gagan3103sharma2000@gmail.com",
+        platform:"Mail"
+    },
+    {
+        link: "https://www.linkedin.com/in/gagan-sharma3103/",
+        username:"/in/gagan-sharma3103/",
+        platform:"LinkedIn"
+    },{
+        link: "https://github.com/GaganSharmaGitHub",
+        username:"/GaganSharmaGitHub",
+        platform:"GitHub"
+    },{
+        link: "https://t.me/NevermindGags",
+        username:"/NevermindGags",
+        platform:"Telegram"
+    },
+
 ]

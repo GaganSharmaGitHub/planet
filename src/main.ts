@@ -115,21 +115,9 @@ scene.add(faceCube);
 	} )
 })()
 
-// function keyDown(event:KeyboardEvent){
-// 	keyboard[event.keyCode] = true
-// 	if(event.key=='g') console.log(camera.position)
-// }
-
-// function keyUp(event:KeyboardEvent){
-// 	keyboard[event.keyCode] = false
-// }
-
-// window.addEventListener('keydown', keyDown)
-// window.addEventListener('keyup', keyUp)
-//handle scroll
 const handleScroll=(_e:Event)=>{
 	const pos= window.scrollY
-	if(pos<=300)headerScroll(pos)
+    headerScroll(pos)
 	camera.position.z = pos/100
 }
 
@@ -139,42 +127,11 @@ animate()
 function animate() {
   requestAnimationFrame(animate)
 
- // moon.rotation.y += 0.005
-//  moon.rotation.z += 0.01
-
-
-  // controls.update()
   mesh.rotation.x += 0.01
 	mesh.rotation.y += 0.02
 	mesh.rotation.z += 0.02
 	faceCube.rotation.y += 0.02
 	
-	// // Keyboard movement inputs
-	// if(keyboard[87]){ // W key
-	// //	camera.position.x -= Math.sin(camera.rotation.y) * player.speed
-	// 	camera.position.z -= -Math.cos(camera.rotation.y) * player.speed
-	// }
-	// if(keyboard[83]){ // S key
-	// //	camera.position.x += Math.sin(camera.rotation.y) * player.speed
-	// 	camera.position.z += -Math.cos(camera.rotation.y) * player.speed
-	// }
-	// if(keyboard[65]){ // A key
-	// 	// Redirect motion by 90 degrees
-	// 	camera.position.x += Math.sin(camera.rotation.y + Math.PI/2) * player.speed
-	// 	camera.position.z += -Math.cos(camera.rotation.y + Math.PI/2) * player.speed
-	// }
-	// if(keyboard[68]){ // D key
-	// 	camera.position.x += Math.sin(camera.rotation.y - Math.PI/2) * player.speed
-	// 	camera.position.z += -Math.cos(camera.rotation.y - Math.PI/2) * player.speed
-	// }
-	
-	// // Keyboard turn inputs
-	// if(keyboard[37]){ // left arrow key
-	// 	camera.rotation.y -= player.turnSpeed
-	// }
-	// if(keyboard[39]){ // right arrow key
-	// 	camera.rotation.y += player.turnSpeed
-	// }
-  renderer.render(scene, camera)
+// renderer.render(scene, camera)
 }
 animate()

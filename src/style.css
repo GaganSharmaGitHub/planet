@@ -1,128 +1,343 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-
+:root {
+    --main-accent-color: #3137fd;
 }
-html{
-  overflow-x: hidden;
-  width: 100vw;
+
+* ul {
+    list-style-type: none;
 }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+* a,
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
 main {
-  width: 100vw;
-  color: white;
-  z-index: 90;
-  position: absolute;
-  width: 100%;
+    width: 100vw;
+    color: white;
+    z-index: 90;
+    position: absolute;
+    width: 100%;
 }
-header{
-  position: relative;
-  height: calc(100vh + 250px);
+
+header {
+    position: relative;
+    height: calc(100vh + 250px);
 }
 
 canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-section.section h2{
-  font-size: xx-large;
-  display: inline-block;
-  padding: 20px;
-  margin: 10px;
-  position: sticky;
-  top: 0;
-  background-color: brown;
-}
-section#projectSection div.projectCard{
-  background-color: green;
-  margin: 20px;
-  display: flex;
-  flex-direction: row;
-  width: 500px;
-  max-width: 80vw;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-section#projectSection div.projectCard img{
-  width: 200px;
-  height: 200px;
-  padding: 10px; 
+.card {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    line-height: 150%;
+    color: rgb(53, 53, 53);
 }
 
-section#projectSection div.projectCard div{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;  
+#aboutMeSec {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px;
+    justify-content: space-between;
 }
+
+#aboutMeSec .card {
+    max-width: 600px;
+    padding: 20px;
+}
+
+#aboutMeSec ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+#aboutMeSec h5 {
+    display: inline;
+    font-size: x-large;
+    color: inherit;
+}
+
+#aboutMeSec span {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#aboutMeSec h6 {
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+section.section h2 {
+    font-size: xx-large;
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    position: sticky;
+    top: 0;
+}
+
+section#projectSection div.projectCard {
+    background-color: white;
+    margin: 40px 20px 30px 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 500px;
+    max-width: 80vw;
+}
+
+section#projectSection div.projectCard img {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+section#projectSection div.projectCard div {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+section#projectSection div.projectCard div h4 {
+    color: var(--main-accent-color);
+    margin: 5px 0 10px 0;
+    font-size: x-large;
+}
+
+
 /* section#projectSection div.projectCard p.allTech{
   
 } */
-section#skillSection div.skillCard{
-  width: 250px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  margin: 20px;
-  background-color: blue;
+
+section#skillSection div.skillCard {
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    color: var(--main-accent-color);
+    background-color: white;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 
-#skillSection,#expSection{
-  align-items: flex-end;
+section#skillSection div.skillCard div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
-section#expSection div.expCard img{
-  width: 100px;
-  height: 100px;
-}
-section#expSection div.expCard ul li{
-  line-height: 1;
-}
-section#expSection div.expCard ul{
-  list-style-type: none;
-}
-#scbuffer1{
-  height: 150px;
-}
-section#expSection div.expCard{
-  width: 300px;
-  line-height: 1.5;
-  display: flex;
-  flex-direction: column;
-  font-size: 150%;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  margin: 20px;
-  margin-top: 40px;
-  background-color: blue;
-}
-section.section{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-div#ship{
-  background-image: url('assets/ship.png');
-  background-repeat: no-repeat ;
-  height: 100vh;
-  transition: opacity 0.02s;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
-  font-size: xx-large;
-  position: sticky;
-  top: 0;
-  background-position-y: top;
-  background-position-x: center;
-  width: 100vw;
 
+section#skillSection div.skillCard:hover {
+    background-color: var(--main-accent-color);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0.5em 0.5em -0.4em gray;
+    transform: translateX(-20px);
+    cursor: pointer;
+}
+
+section#skillSection div.skillCard:hover img {
+    filter: grayscale(100%);
+}
+
+#skillSection,
+#expSection {
+    align-items: flex-end;
+}
+
+section#expSection div.expCard img {
+    height: 100px;
+    margin: 30px;
+}
+
+section#expSection div.expCard ul li {
+    line-height: 1;
+}
+
+section#expSection div.expCard ul {
+    list-style-type: none;
+}
+
+#scbuffer1 {
+    height: 150px;
+}
+
+section#expSection div.expCard h3,
+h4 {
+    color: var(--main-accent-color);
+    margin-bottom: 5px;
+}
+
+section#expSection div.expCard {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    max-width: 80vw;
+    padding: 30px;
+    font-size: 120%;
+    line-height: 1.1;
+    margin: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+div#ship {
+    background-image: url('assets/ship.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    transition: opacity 0.02s;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    font-size: xx-large;
+    position: sticky;
+    top: 0;
+    background-position-y: top;
+    background-position-x: center;
+    width: 100vw;
+}
+
+.contact {
+    margin: 20px;
+}
+
+.contact button {
+    background: none;
+    border: 2px solid var(--main-accent-color);
+    color: var(--main-accent-color);
+    transition: 0.25s;
+    margin: 0.5em;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.contact button .platform {
+    background-color: var(--main-accent-color);
+    color: #fff;
+}
+
+.contact button .username,
+.platform {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    transition: 0.5s;
+    padding: 10px;
+}
+
+.contact button:hover .username {
+    box-shadow: inset 20em 0 0 0 var(--main-accent-color);
+    color: white;
+}
+
+#contactList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button.b1 {
+    background: none;
+    border: 2px solid var(--main-accent-color);
+    color: var(--main-accent-color);
+    transition: 0.25s;
+    margin: 0.5em;
+    padding: 1em 2em;
+    cursor: pointer;
+    width: fit-content;
+}
+
+button.b1:hover,
+button.b1:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--main-accent-color);
+    color: white;
+}
+
+.wrap-effect {
+    position: relative;
+}
+
+.slide:hover,
+.slide:focus {
+    box-shadow: inset 6.5em 0 0 0 var(--main-accent-color);
+    color: #fff;
+}
+
+.wrap-effect::before,
+.wrap-effect::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border: 2px solid var(--main-accent-color);
+    transition: all 0.25s ease-out;
+}
+
+.wrap-effect::before {
+    background-color: var(--main-accent-color);
+    top: -15px;
+    left: -15px;
+}
+
+.wrap-effect::after {
+    bottom: -15px;
+    right: -15px;
+}
+
+.wrap-effect:hover::before {
+    top: 15px;
+    left: 15px;
+}
+
+.wrap-effect:hover::after {
+    bottom: 15px;
+    right: 15px;
+}
+
+.expCard:hover,
+.expCard:focus {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 gray;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 gray;
+    }
 }
