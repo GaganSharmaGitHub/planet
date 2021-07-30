@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "preview": "vite preview",
+    "host": "vite preview --host"
   },
   "devDependencies": {
     "@types/three": "^0.128.0",

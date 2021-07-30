@@ -2,7 +2,7 @@ import './style.css'
 import * as THREE from 'three'
 import { headerScroll } from './headScroll'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import {allSkills,myTools} from './data'
+import {allSkills,getImageUrl,myTools} from './data'
 import { addFloor } from './addFloor'
 import { addHTML } from './htmlAddition'
 import { addEnv } from './addEnv'
@@ -18,19 +18,17 @@ const player = { height:1.8, speed:0.2, turnSpeed:Math.PI*0.02 }
 //mesh
 let mesh = new THREE.Mesh(
 	new THREE.OctahedronGeometry(1),
-	new THREE.MeshBasicMaterial({color:0xff4444, wireframe:true})
-  )
-
+	new THREE.MeshBasicMaterial({ color: 0x3137fd, wireframe: true })
+);
+let faceCube:any;
 //face cube
-const faceTexture = new THREE.TextureLoader().load('assets/my.jpg')
-
-const faceCube = new THREE.Mesh(new THREE.BoxGeometry(1.5, 1.5, 1.5), new THREE.MeshBasicMaterial({ map: faceTexture }))
-faceCube.position.set(-3,1.5,12)
-scene.add(faceCube);
 
 //init
 (async()=>{
 	addHTML()
+	    document.getElementById("loading")!.style.display = 'none';
+    document.getElementById("app")!.style.display = 'block';
+
 	//configure
 	renderer.setPixelRatio(window.devicePixelRatio)
 	renderer.setSize(window.innerWidth, window.innerHeight)
@@ -40,7 +38,7 @@ scene.add(faceCube);
 	camera.lookAt(new THREE.Vector3(0,player.height,0))
 	
 	// bg
-	const spaceTexture = new THREE.TextureLoader().load('assets/nbg.jpg')
+	const spaceTexture = new THREE.TextureLoader().load('/nbg.jpg')
 	spaceTexture.repeat
 	scene.background = spaceTexture
 
@@ -54,19 +52,23 @@ scene.add(faceCube);
 	mesh.position.y += 3
 	mesh.position.z=2
    // Move the mesh up 1 meter
+const faceTexture = new THREE.TextureLoader().load('/my.jpg')
+ faceCube = new THREE.Mesh(new THREE.BoxGeometry(1.5, 1.5, 1.5), new THREE.MeshBasicMaterial({ map: faceTexture }))
+faceCube.position.set(-3,1.5,12)
+scene.add(faceCube);
 
    let znow=16;  	
    scene.add(mesh)
    const gtloader = new GLTFLoader()
    addInfra(scene)
 	//skill board 3d model
-	await gtloader.load( 'assets/models/construction_barricades/scene.gltf', function ( gltfmodel ) {
+	await gtloader.load( 'models/construction_barricades/scene.gltf', function ( gltfmodel ) {
 		const gltf=gltfmodel.scene
 		//.children[0].children[0]
 		//g('signs loaded')
 		const standboard=gltf.clone()
 		const plankboard=gltf.clone()
-		console.log('st', standboard,'pl',plankboard)
+		//console.log('st', standboard,'pl',plankboard)
 	for(let i=0;i<standboard.children[0].children[0].children[0].children.length;i++){
 		standboard.children[0].children[0].children[0].children[i].visible=i<4
 		plankboard.children[0].children[0].children[0].children[i].visible=!(i<4)
@@ -80,7 +82,7 @@ scene.add(faceCube);
 		for(let i=0;i<allSkills.length;i++){
 		   const geometry = new THREE.PlaneGeometry(0.3,0.3)
 		   const material = new THREE.MeshStandardMaterial({
-			   map:new THREE.TextureLoader().load(allSkills[i].image),
+			   map:new THREE.TextureLoader().load(getImageUrl(allSkills[i].image)),
 			   transparent:true
 			 //  displacementScale:-1
 			 })
@@ -130,8 +132,8 @@ function animate() {
   mesh.rotation.x += 0.01
 	mesh.rotation.y += 0.02
 	mesh.rotation.z += 0.02
-	faceCube.rotation.y += 0.02
+	if(faceCube)faceCube.rotation.y += 0.02
 	
-// renderer.render(scene, camera)
+ renderer.render(scene, camera)
 }
 animate()

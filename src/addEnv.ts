@@ -18,9 +18,9 @@ export function addEnv(scene:THREE.Scene){
 		star.position.set(x, y, z)
 		scene.add(star)
 	  }
-	//===============assets
+	//===============public
 	//fall tree
-	gtloader.load('assets/models/falltree/model.gltf',
+	gtloader.load('/models/falltree/model.gltf',
 	(gltfmodel)=>{
 	const tree= gltfmodel.scene
 	
@@ -34,7 +34,7 @@ export function addEnv(scene:THREE.Scene){
 		i++
 	}
 	})//bldr
-	gtloader.load('assets/models/bouldar/boulder_03.gltf',
+	gtloader.load('/models/bouldar/boulder_03.gltf',
 	(gltfmodel)=>{
 	const bldr= gltfmodel.scene
 	bldr.scale.setScalar(0.01)
@@ -51,14 +51,14 @@ export function addEnv(scene:THREE.Scene){
 	}
 	})
 	//cactus
-	gtloader.load('assets/models/cactus/PipeOrganCactus.gltf',
+	gtloader.load('/models/cactus/PipeOrganCactus.gltf',
 	(gltfmodel)=>{
 	const cactus= gltfmodel.scene
 	cactus.scale.setScalar(0.3)
 	cactus.position.set(0,0,22)
 	cactus.children[2].visible=false
 	//g('bldr')
-	//g(bldr)
+		//console.log(cactus);
 	let i=0
 	while(i<7){
 		addrandomonfloor(cactus.clone(),0)
@@ -66,7 +66,7 @@ export function addEnv(scene:THREE.Scene){
 	}
 	})
 	//been
-	gtloader.load('assets/models/beanstalk/PUSHILIN_Beanstalk.gltf',
+	gtloader.load('/models/beanstalk/PUSHILIN_Beanstalk.gltf',
 	(gltfmodel)=>{
 	const bean= gltfmodel.scene
 	bean.scale.setScalar(1)
@@ -81,7 +81,7 @@ export function addEnv(scene:THREE.Scene){
 	}
 	})
 	//babmm
-	gtloader.load('assets/models/bamboo/PUSHILIN_bamboo.gltf',
+	gtloader.load('/models/bamboo/PUSHILIN_bamboo.gltf',
 	(gltfmodel)=>{
 	const bamboo= gltfmodel.scene
 //	bamboo.scale.setScalar(0.3)
@@ -96,7 +96,7 @@ export function addEnv(scene:THREE.Scene){
 	}
 	})
 	//willow
-	gtloader.load('assets/models/weepwillow/WeepingWillowTree.gltf',
+	gtloader.load('/models/weepwillow/WeepingWillowTree.gltf',
 	(gltfmodel)=>{
 	const tree= gltfmodel.scene.children[0]
 	tree.scale.setScalar(0.5)

@@ -54,7 +54,7 @@ canvas {
     color: rgb(53, 53, 53);
 }
 
-#aboutMeSec {
+.section {
     display: flex;
     align-items: flex-start;
     padding: 30px;
@@ -207,8 +207,29 @@ section.section {
     min-height: 100vh;
 }
 
+body.no3d {
+    background-image: url('/nbg.jpg');
+    background-color: gray;
+    background-repeat: repeat-y;
+    height: 100vh;
+    background-size: cover;
+}
+
+body #ship a {
+    font-size: large;
+    text-shadow: 0 1px 0 #aaacfc, 0 2px 0 #8d90e0, 0 3px 0 #6f72ca, 0 4px 0 #7377f7, 0 5px 0 #7f82d6, 0 6px 0 #4346a7, 0 7px 0 #3438aa, 0 8px 0 #1f24ad, 0 0 5px rgba(140, 139, 230, 0.05), 0 -1px 3px rgba(145, 139, 230, 0.2), 0 9px 9px rgba(153, 139, 230, 0.3), 0 12px 12px rgba(145, 139, 230, 0.3), 0 15px 15px rgba(139, 140, 230, 0.3);
+}
+
+body #ship span {
+    font-size: medium;
+}
+
+body.no3d #ship a:hover {
+    transform: scale(1.1);
+}
+
 div#ship {
-    background-image: url('assets/ship.png');
+    background-image: url('/ship.png');
     background-repeat: no-repeat;
     height: 100vh;
     transition: opacity 0.02s;
@@ -247,6 +268,7 @@ div#ship {
 .contact button .username,
 .platform {
     display: inline-block;
+    background-color: #fff;
     height: 100%;
     margin: 0;
     transition: 0.5s;
