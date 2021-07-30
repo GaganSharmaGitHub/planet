@@ -1,6 +1,7 @@
 const { resolve } = require('path')
-
-module.exports = {
+import { defineConfig } from 'vite'
+export default defineConfig({
+    base: '/planet/',
     build: {
         rollupOptions: {
             input: {
@@ -9,4 +10,5 @@ module.exports = {
             }
         }
     },
-}
+
+})

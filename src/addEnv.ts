@@ -20,7 +20,7 @@ export function addEnv(scene:THREE.Scene){
 	  }
 	//===============public
 	//fall tree
-	gtloader.load('/models/falltree/model.gltf',
+	gtloader.load('model/falltree/model.gltf',
 	(gltfmodel)=>{
 	const tree= gltfmodel.scene
 	
@@ -34,7 +34,7 @@ export function addEnv(scene:THREE.Scene){
 		i++
 	}
 	})//bldr
-	gtloader.load('/models/bouldar/boulder_03.gltf',
+	gtloader.load('model/bouldar/boulder_03.gltf',
 	(gltfmodel)=>{
 	const bldr= gltfmodel.scene
 	bldr.scale.setScalar(0.01)
@@ -51,7 +51,7 @@ export function addEnv(scene:THREE.Scene){
 	}
 	})
 	//cactus
-	gtloader.load('/models/cactus/PipeOrganCactus.gltf',
+	gtloader.load('model/cactus/PipeOrganCactus.gltf',
 	(gltfmodel)=>{
 	const cactus= gltfmodel.scene
 	cactus.scale.setScalar(0.3)
@@ -66,7 +66,7 @@ export function addEnv(scene:THREE.Scene){
 	}
 	})
 	//been
-	gtloader.load('/models/beanstalk/PUSHILIN_Beanstalk.gltf',
+	gtloader.load('model/beanstalk/PUSHILIN_Beanstalk.gltf',
 	(gltfmodel)=>{
 	const bean= gltfmodel.scene
 	bean.scale.setScalar(1)
@@ -81,7 +81,7 @@ export function addEnv(scene:THREE.Scene){
 	}
 	})
 	//babmm
-	gtloader.load('/models/bamboo/PUSHILIN_bamboo.gltf',
+	gtloader.load('model/bamboo/PUSHILIN_bamboo.gltf',
 	(gltfmodel)=>{
 	const bamboo= gltfmodel.scene
 //	bamboo.scale.setScalar(0.3)
@@ -96,7 +96,7 @@ export function addEnv(scene:THREE.Scene){
 	}
 	})
 	//willow
-	gtloader.load('/models/weepwillow/WeepingWillowTree.gltf',
+	gtloader.load('model/weepwillow/WeepingWillowTree.gltf',
 	(gltfmodel)=>{
 	const tree= gltfmodel.scene.children[0]
 	tree.scale.setScalar(0.5)

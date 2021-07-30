@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 export function addInfra(scene:THREE.Scene){
     const gtloader = new GLTFLoader()
     
-	gtloader.load('/models/buld/Bulldozer.gltf',
+	gtloader.load('model/buld/Bulldozer.gltf',
 	(gltfmodel)=>{
 	const bulldozer= gltfmodel.scene
 	
@@ -16,7 +16,7 @@ export function addInfra(scene:THREE.Scene){
 	scene.add(bulldozer)
 	})
 	//truck
-	gtloader.load('/models/dumbtruck/Dump_Truck_01.gltf',
+	gtloader.load('model/dumbtruck/Dump_Truck_01.gltf',
 	(gltfmodel)=>{
 	const truck= gltfmodel.scene
 	truck.children[2].visible=false
@@ -27,7 +27,7 @@ export function addInfra(scene:THREE.Scene){
 	scene.add(truck)
 	},undefined,console.log)
 	// constr house
-	gtloader.load('/models/cabin/Cabin 2.gltf',
+	gtloader.load('model/cabin/Cabin 2.gltf',
 	(gltfmodel)=>{
 	const house= gltfmodel.scene
 	house.scale.setScalar(0.01)
@@ -37,7 +37,7 @@ export function addInfra(scene:THREE.Scene){
 	scene.add(house)
 	},undefined,console.log)
 	//wood
-	gtloader.load('/models/woodpile/model.gltf',
+	gtloader.load('model/woodpile/model.gltf',
 	(gltfmodel)=>{
 	const wpile= gltfmodel.scene
 	wpile.scale.setScalar(4)
@@ -50,7 +50,7 @@ export function addInfra(scene:THREE.Scene){
 	scene.add(wpile)
 	},undefined,console.log)
     
-	gtloader.load('/models/silo/PUSHILIN_silo.gltf',
+	gtloader.load('model/silo/PUSHILIN_silo.gltf',
 	(gltfmodel)=>{
 	const silo= gltfmodel.scene
     silo.children[2].visible=false
@@ -59,7 +59,7 @@ export function addInfra(scene:THREE.Scene){
 	scene.add(silo)
 	},undefined,console.log)
 
-	gtloader.load('/models/windm/PUSHILIN_windmill.gltf',
+	gtloader.load('model/windm/PUSHILIN_windmill.gltf',
 	(gltfmodel)=>{
 	const windm= gltfmodel.scene
     windm.scale.setScalar(5)
@@ -70,7 +70,7 @@ export function addInfra(scene:THREE.Scene){
 	scene.add(windm)
 	},undefined,console.log)
     
-	gtloader.load('/models/wheat/FieldOfWheat.gltf',
+	gtloader.load('model/wheat/FieldOfWheat.gltf',
 	(gltfmodel)=>{
 	const barn= gltfmodel.scene.children[0].children[0].children[0]
     barn.scale.setScalar(0.1)
@@ -88,7 +88,7 @@ export function addInfra(scene:THREE.Scene){
 }
 },undefined,console.log)
 //===== industrial
-gtloader.load('/models/skysc/PUSHILIN_skyscraper.gltf',
+gtloader.load('model/skysc/PUSHILIN_skyscraper.gltf',
 	(gltfmodel)=>{
 	const skyscraper= gltfmodel.scene
     skyscraper.scale.set(4,3,4)
@@ -98,7 +98,7 @@ gtloader.load('/models/skysc/PUSHILIN_skyscraper.gltf',
 	scene.add(skyscraper)
 	},undefined,console.log)
 
-	gtloader.load('/models/skysc2/model.gltf',
+	gtloader.load('model/skysc2/model.gltf',
 	(gltfmodel)=>{
 	const factory= gltfmodel.scene
     factory.scale.set(7,5,7)
@@ -107,7 +107,7 @@ gtloader.load('/models/skysc/PUSHILIN_skyscraper.gltf',
 	scene.add(factory)
 	},undefined,console.log)
     
-	gtloader.load('/models/skyscs/Skycraper_173.gltf',
+	gtloader.load('model/skyscs/Skycraper_173.gltf',
 	(gltfmodel)=>{
 	const ssc= gltfmodel.scene
     ssc.scale.setScalar(0.05)
@@ -116,7 +116,7 @@ gtloader.load('/models/skysc/PUSHILIN_skyscraper.gltf',
 	scene.add(ssc)
 	},undefined,console.log)
 
-	gtloader.load('/models/factory/CUPIC_FACTORy.gltf',
+	gtloader.load('model/factory/CUPIC_FACTORy.gltf',
 	(gltfmodel)=>{
 	const factory= gltfmodel.scene
     factory.scale.setScalar(0.02)
@@ -124,7 +124,7 @@ gtloader.load('/models/skysc/PUSHILIN_skyscraper.gltf',
 	factory.position.set(-10,0,63)
 	scene.add(factory)
 	},undefined,console.log)
-   gtloader.load('/models/canyon/model.gltf',
+   gtloader.load('model/canyon/model.gltf',
 	(gltfmodel)=>{
 	const canyon= gltfmodel.scene
 	//console.log(gltfmodel)
