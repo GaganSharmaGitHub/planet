@@ -208,7 +208,7 @@ section.section {
 }
 
 body.no3d {
-    background-image: url('/nbg.jpg');
+    background-image: url('nbg.jpg');
     background-color: gray;
     background-repeat: repeat-y;
     height: 100vh;

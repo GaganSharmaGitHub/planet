@@ -38,7 +38,7 @@ let faceCube:any;
 	camera.lookAt(new THREE.Vector3(0,player.height,0))
 	
 	// bg
-	const spaceTexture = new THREE.TextureLoader().load('/nbg.jpg')
+	const spaceTexture = new THREE.TextureLoader().load('nbg.jpg')
 	spaceTexture.repeat
 	scene.background = spaceTexture
 
@@ -52,7 +52,7 @@ let faceCube:any;
 	mesh.position.y += 3
 	mesh.position.z=2
    // Move the mesh up 1 meter
-const faceTexture = new THREE.TextureLoader().load('/my.jpg')
+const faceTexture = new THREE.TextureLoader().load('my.jpg')
  faceCube = new THREE.Mesh(new THREE.BoxGeometry(1.5, 1.5, 1.5), new THREE.MeshBasicMaterial({ map: faceTexture }))
 faceCube.position.set(-3,1.5,12)
 scene.add(faceCube);
