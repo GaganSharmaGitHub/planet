@@ -2,7 +2,7 @@ import './style.css'
 import * as THREE from 'three'
 import { headerScroll } from './headScroll'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import {allSkills,getImageUrl,myTools} from './data'
+import {allSkills,myTools} from './data'
 import { addFloor } from './addFloor'
 import { addHTML } from './htmlAddition'
 import { addEnv } from './addEnv'
@@ -82,7 +82,7 @@ scene.add(faceCube);
 		for(let i=0;i<allSkills.length;i++){
 		   const geometry = new THREE.PlaneGeometry(0.3,0.3)
 		   const material = new THREE.MeshStandardMaterial({
-			   map:new THREE.TextureLoader().load(getImageUrl(allSkills[i].image)),
+			   map:new THREE.TextureLoader().load(allSkills[i].image),
 			   transparent:true
 			 //  displacementScale:-1
 			 })

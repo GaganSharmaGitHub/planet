@@ -1,10 +1,10 @@
-import {Skill,Project, Exp, Contact, getImageUrl} from './data'
+import {Skill,Project, Exp, Contact} from './data'
 export const skillCard=(skill:Skill):HTMLElement=>{
  const el= document.createElement('div')
  el.className="skillCard"
   el.innerHTML =`
             <div>
-            <img src="${getImageUrl(skill.image)}" width="50px" alt="">
+            <img src="${skill.image}" width="50px" alt="">
             <span>${skill.title}</span>
             </div>
             <br/>
@@ -21,7 +21,7 @@ export const projectCard=(project:Project):HTMLElement=>{
   const el= document.createElement('div')
   el.className="projectCard"
   el.innerHTML=`
-            <img src="${getImageUrl(project.image)}" alt="${project.title}">
+            <img src="${project.image}" alt="${project.title}">
             <div>
             <h4>
               ${project.title}
@@ -46,7 +46,7 @@ export const expCard=(exp:Exp):HTMLElement=>{
   const el= document.createElement('div')
   el.classList.add("expCard","card")
   el.innerHTML=`
-  <img src="${getImageUrl(exp.image)}" alt="${exp.company}">
+  <img src="${exp.image}" alt="${exp.company}">
   <div class="textCont">  
     <h3>${exp.company}</h3>
     <h4>${exp.role},</h4> 
