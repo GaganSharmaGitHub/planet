@@ -1,0 +1,1 @@
+import{a as e,h as n}from"./htmlAddition.aa224fc5.js";(async()=>{e(),document.getElementById("loading").style.display="none",document.getElementById("app").style.display="block"})();window.addEventListener("scroll",(e=>{const t=window.scrollY;n(t)}));
